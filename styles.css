@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.users-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  padding: 2.5rem 1.25rem;
+}
+
+.user-container {
+  position: relative;
+  width: 13.75rem;
+  padding: 0.9375rem;
+  background: #f9f9f9;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.user-container:hover {
+  transform: rotate(2deg) translateY(-0.625rem) scale(1.08);
+  box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.2);
+}
+
+.user-image {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 0.625rem;
+}
+
+.user-details {
+  text-align: start;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.3125rem;
+}
+
+.user-email,
+.user-age,
+.user-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.3125rem;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background: url('https://cdn-icons-png.flaticon.com/512/1828/1828778.png')
+    center/cover no-repeat;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+.fade-out {
+  animation: fadeOut 0.4s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
